@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+void callbyValue(int a , int b){
+cout<<"Before swap: a= "<<a<<", b= "<<b<<endl;
+int temp=a;
+a=b;
+b=temp;
+cout<<"After swap: a= "<<a<<", b= "<<b<<endl;
+}
+void callbyReference(int &a, int &b){
+cout<<"Before swap: a= "<<a<<", b= "<<b<<endl;
+int temp=a;
+a=b;
+b=temp;
+cout<<"After swap: a= "<<a<<", b= "<<b<<endl;
+}
+int main(){
+int x=10, y=20;
+cout<<"Call by Value:"<<endl;
+callbyValue(x,y);
+cout<<"In main after call by value: x= "<<x<<", y= "<<y<<endl;
+cout<<"Call by Reference:"<<endl;
+callbyReference(x,y);
+cout<<"In main after call by Reference: x= "<<x<<", y= "<<y<<endl;
+return 0;
+}
